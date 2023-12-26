@@ -43,8 +43,9 @@ function App() {
 
 
   return (
-    <Router>
-      <div className="App">
+    <div className="App">
+    <Router  basename={process.env.PUBLIC_URL}>
+     
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route
@@ -79,8 +80,7 @@ function App() {
             element={
               <>
                 <Header />
-                <Orders />
-                
+                <Orders />                
               </>
             }
           />
@@ -95,8 +95,9 @@ function App() {
             }
           />
         </Routes>
-      </div>
+    
     </Router>
+    </div>
   );
 }
 
